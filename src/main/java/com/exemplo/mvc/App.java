@@ -4,7 +4,6 @@ import com.exemplo.mvc.controller.UsuarioController;
 import com.exemplo.mvc.repository.UsuarioRepository;
 import com.exemplo.mvc.service.UsuarioService;
 import com.exemplo.mvc.view.UsuarioView;
-import com.exemplo.mvc.model.Usuario;
 
 public class App {
     public static void main(String[] args) {
