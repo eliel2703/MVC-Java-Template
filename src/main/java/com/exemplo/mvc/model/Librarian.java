@@ -12,10 +12,10 @@ public class Librarian {
         this.books = books;
     }
 
-    public void listBooks(List<Book> books){
-        for (int i = 0; i < books.size() ; i++) {
-            System.out.println(books);
-        }
+     public void listBooks() {
+        System.out.println("\nCatálogo de livros - Bibliotecário: " + name);
+        BookView view = new BookView();
+        view.listBooks(books);
     }
 
     // Getters e Setters
