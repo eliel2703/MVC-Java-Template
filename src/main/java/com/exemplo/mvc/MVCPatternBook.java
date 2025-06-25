@@ -12,9 +12,9 @@ import com.exemplo.mvc.view.BookView;
 
 public class MVCPatternBook {
     public static void main(String[] args) {
-        Book livro1 = new Book("Pequeno Principe", "Antoine de Saint-Exupéry", 
+        Book livro1 = new Book("Mein Kepf", "Adolf Hitler", 
                              96, BookCategory.LITERATURE, LocalDate.now().minusDays(10));
-        Book livro2 = new Book("Clean Code", "Robert C. Martin", 
+        Book livro2 = new Book("O diário", "Fernandao", 
                              464, BookCategory.TECHNOLOGY, LocalDate.now().minusMonths(1));
         Book livro3 = new Book(null, null, null, null, null); // Livro com valores nulos para teste
 
@@ -26,7 +26,7 @@ public class MVCPatternBook {
         
         System.out.println("Alterar dados");
         controller.setBookTitle("O Pequeno Príncipe");
-        controller.setBookAuthor("Antoine de Saint-Exupéry");
+        controller.setBookAuthor("Odair");
         controller.setBookCategory(BookCategory.HISTORY);
         controller.setBookPages(100);
         controller.addExtraPages(5);
@@ -41,7 +41,7 @@ public class MVCPatternBook {
         livros.add(livro2);
         livros.add(livro3);
         
-        Librarian bibliotecario = new Librarian("Eliel Rodrigo", livros);
+        Librarian bibliotecario = new Librarian("Eliel", livros);
         bibliotecario.listBooks();
     }
 }
