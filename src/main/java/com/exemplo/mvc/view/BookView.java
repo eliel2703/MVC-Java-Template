@@ -11,10 +11,10 @@ public class BookView {
         System.out.println("Category " + bookModel.getCategory());
         System.out.println("Data de Registro " + bookModel.getRegistrationDate());
 
-        try {
-            
-        } catch (Exception e) {
-            
+        public void listBooks(List<Book> books){
+        for (int i = 0; i < books.size() ; i++) {
+            System.out.println(books);
+        }
         }
 }
 
