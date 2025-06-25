@@ -20,11 +20,11 @@ public class BookController {
     }
 
     public void setBookAuthor (String author){
-        model.setauthor(author);
+        model.setAuthor(author);
     }
 
     public void setBookPages(Integer pages){
-        model.setpages(pages);
+        model.setPages(pages);
     }
 
     public void addExtraPages(int extra){
@@ -32,10 +32,10 @@ public class BookController {
     }
 
     public void setBookCategory(BookCategory cat){
-        model.setcategory(cat);
+        model.setCategory(cat);
     }
 
-    public void registrationDate(LocalDate registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         model.setRegistrationDate(registrationDate);
       }
 

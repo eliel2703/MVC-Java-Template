@@ -17,13 +17,13 @@ public class Book extends Publication{
         }
     
         // Getters e Setters
-        public String getauthor() { return author; }
-        public void setauthor(String author) { this.author = author; }
-        public Integer getpages() { return pages; }
-        public void setpages(Integer pages) { this.pages = pages; }
+        public String getAuthor() { return author; }
+        public void setAuthor(String author) { this.author = author; }
+        public Integer getPages() { return pages; }
+        public void setPages(Integer pages) { this.pages = pages; }
         public BookCategory getCategory() { return category; }
         public void incrementPages(int extra){}
-        public void setcategory(BookCategory category) { this.category = category; }
+        public void setCategory(BookCategory category) { this.category = category; }
         public LocalDate getRegistrationDate() { return registrationDate; }
         public void setRegistrationDate(LocalDate registrationDate) { this.registrationDate = registrationDate; }
 }

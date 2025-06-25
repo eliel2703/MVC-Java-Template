@@ -2,6 +2,8 @@ package com.exemplo.mvc.model;
 
 import java.util.List;
 
+import com.exemplo.mvc.view.BookView;
+
 public class Librarian {
     private String name;
     private List<Book> books;
