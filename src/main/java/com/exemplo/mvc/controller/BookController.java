@@ -39,6 +39,14 @@ public class BookController {
         model.setRegistrationDate(registrationDate);
       }
 
+    public void addExtraPages(int extraPages) {
+        if (model.getPages() != null) {
+            model.setPages(model.getPages() + extraPages);
+        } else {
+            model.setPages(extraPages);
+        }
+    }
+
     public void updateView(){
         view.printBookDetails(model);
     }
