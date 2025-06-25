@@ -13,9 +13,9 @@ import com.exemplo.mvc.view.BookView;
 public class MVCPatternBook {
     public static void main(String[] args) {
         Book book1 = new Book("Mein Kepf", "Adolf Hitler", 
-                             96, BookCategory.LITERATURE, LocalDate.now().minusDays(10));
+                             96, BookCategory.LITERATURE, LocalDate.now());
         Book book2 = new Book("O diário", "Fernandao", 
-                             464, BookCategory.TECHNOLOGY, LocalDate.now().minusMonths(1));
+                             464, BookCategory.TECHNOLOGY, LocalDate.now());
         Book book3 = new Book(null, null, null, null, null);
 
         BookView view = new BookView();
