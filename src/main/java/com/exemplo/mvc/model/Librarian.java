@@ -15,7 +15,7 @@ public class Librarian {
     }
 
      public void listBooks() {
-        System.out.println("\nCatálogo de livros - Bibliotecário: " + name);
+        System.out.println("\nCatálogo de livros do Bibliotecário: " + name);
         BookView view = new BookView();
         view.listBooks(books);
     }
