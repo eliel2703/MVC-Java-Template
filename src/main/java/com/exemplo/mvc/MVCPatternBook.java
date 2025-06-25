@@ -21,7 +21,7 @@ public class MVCPatternBook {
         BookView view = new BookView();
         BookController controller = new BookController(book1, view);
         
-        System.out.println("Livro Inicial");
+        System.out.println("\n Livro Inicial");
         controller.updateView();
         
         System.out.println("Alterar dados");
@@ -32,10 +32,9 @@ public class MVCPatternBook {
         controller.addExtraPages(5);
         controller.setRegistrationDate(LocalDate.now());
         
-        System.out.println("Livro atualizado");
+        System.out.println("\nLivro atualizado");
         controller.updateView();
-
-        System.out.println("books");
+        
         List<Book> books = new ArrayList<>();
         books.add(book1);
         books.add(book2);
