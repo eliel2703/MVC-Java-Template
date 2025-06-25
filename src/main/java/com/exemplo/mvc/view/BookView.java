@@ -7,11 +7,11 @@ public class BookView {
     public void printBookDetails(Book bookModel) {
         try {
             System.out.println("\n--- DETALHES DO LIVRO ---");
-            System.out.println("Title: " + (bookModel.getTitle() != null ? bookModel.getTitle() : "[não informado]"));
-            System.out.println("Author: " + (bookModel.getAuthor() != null ? bookModel.getAuthor() : "[não informado]"));
-            System.out.println("Pages: " + (bookModel.getPages() != null ? bookModel.getPages() : "[não informado]"));
-            System.out.println("Category: " + (bookModel.getCategory() != null ? bookModel.getCategory() : "[não informado]"));
-            System.out.println("Data de Registro: " + (bookModel.getRegistrationDate() != null ? bookModel.getRegistrationDate() : "[não informado]"));
+            System.out.println("Title: " + bookModel.getTitle());
+            System.out.println("Author: " + bookModel.getAuthor());
+            System.out.println("Pages: " + bookModel.getPages());
+            System.out.println("Category: " + bookModel.getCategory());
+            System.out.println("Data de Registro: " + bookModel.getRegistrationDate());
         } catch (Exception e) {
             System.err.println("Erro ao exibir detalhes do livro: " + e.getMessage());
         }
@@ -29,16 +29,14 @@ public class BookView {
                 return;
             }
             
-            for (int i = 0; i < books.size(); i++) {
-                Book book = books.get(i);
-                if (book == null) {
-                    System.out.println((i + 1) + ". [Livro nulo]");
-                    continue;
-                }
-                
-                String title = book.getTitle() != null ? book.getTitle() : "[sem título]";
-                String author = book.getAuthor() != null ? book.getAuthor() : "[autor desconhecido]";
-                System.out.println((i + 1) + ". " + title + " (" + author + ")");
+            System.out.println("\n--- LISTA DE LIVROS ---");
+            for (Book book : books) {
+                System.out.println("Título: " + book.getTitle());
+                System.out.println("Autor: " + book.getAuthor());
+                System.out.println("Páginas: " + book.getPages());
+                System.out.println("Categoria: " + book.getCategory());
+                System.out.println("Data de Registro: " + book.getRegistrationDate());
+                System.out.println("----------------------");
             }
         } catch (Exception e) {
             System.err.println("Erro ao listar livros: " + e.getMessage());

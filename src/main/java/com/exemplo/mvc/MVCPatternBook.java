@@ -12,14 +12,14 @@ import com.exemplo.mvc.view.BookView;
 
 public class MVCPatternBook {
     public static void main(String[] args) {
-        Book livro1 = new Book("Mein Kepf", "Adolf Hitler", 
+        Book book1 = new Book("Mein Kepf", "Adolf Hitler", 
                              96, BookCategory.LITERATURE, LocalDate.now().minusDays(10));
-        Book livro2 = new Book("O diário", "Fernandao", 
+        Book book2 = new Book("O diário", "Fernandao", 
                              464, BookCategory.TECHNOLOGY, LocalDate.now().minusMonths(1));
-        Book livro3 = new Book(null, null, null, null, null); // Livro com valores nulos para teste
+        Book book3 = new Book(null, null, null, null, null);
 
         BookView view = new BookView();
-        BookController controller = new BookController(livro1, view);
+        BookController controller = new BookController(book1, view);
         
         System.out.println("Livro Inicial");
         controller.updateView();
@@ -35,13 +35,13 @@ public class MVCPatternBook {
         System.out.println("Livro atualizado");
         controller.updateView();
 
-        System.out.println("Livros");
-        List<Book> livros = new ArrayList<>();
-        livros.add(livro1);
-        livros.add(livro2);
-        livros.add(livro3);
+        System.out.println("books");
+        List<Book> books = new ArrayList<>();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
         
-        Librarian bibliotecario = new Librarian("Eliel", livros);
-        bibliotecario.listBooks();
+        Librarian librarian = new Librarian("Eliel", books);
+        librarian.listBooks();
     }
 }

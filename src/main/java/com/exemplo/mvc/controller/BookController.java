@@ -27,10 +27,6 @@ public class BookController {
         model.setPages(pages);
     }
 
-    public void addExtraPages(int extra){
-        model.incrementPages(extra);
-    }
-
     public void setBookCategory(BookCategory cat){
         model.setCategory(cat);
     }
